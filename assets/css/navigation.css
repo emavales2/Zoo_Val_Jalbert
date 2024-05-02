@@ -1,0 +1,67 @@
+/* navigation.css ---------------------------
+    composante de navitation */
+
+
+nav {
+    /* Mise en place générale */
+    background-color: white; 
+    display: flex;
+    gap: var(--espace-moyen);
+    z-index: 2;
+    align-items: center;
+    box-shadow: var(--ombre-nav);
+
+    /* Pour que le menu reste sur place et centré */
+    position: fixed;
+    left: 0;
+    right: 0;   
+}
+
+/* liens */
+nav a {
+    display: block; 
+    font-size: var(--texte-m);
+}
+
+nav a:hover {
+    color: var(--vert-lumi);
+}
+
+/* comportement quand on clic entre afficher et fermer*/
+nav [type="checkbox"]:not(:checked)+div {
+    pointer-events: none;
+    opacity: 0;
+}
+
+nav header {
+    margin-right: auto;
+}
+
+/* logo dans la barre de navigation */
+.logo {
+	min-height: var(--espace-grand);
+    width: 125px;
+	padding: var(--espace-petit);
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+
+    input {
+        text-align: right;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    nav a:hover {
+        color: var(--violet-clair);
+    }
+}

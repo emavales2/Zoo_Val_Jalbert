@@ -1,0 +1,141 @@
+
+footer {
+    background-color: var(--vert-fonce);
+    color: var(--arriere-plan);
+    border-top: 1px solid var(--arriere-plan);
+}
+
+footer aside {
+	display: flex;
+	flex-direction: column;
+    flex-basis: 25%;
+	gap: var(--espace-tres-grand);
+    border-right: solid 1px var(--arriere-plan);
+    padding-right: var(--espace-ttt-grand);
+}
+
+footer aside picture {
+    width: 80%;
+    max-width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer aside img {
+    width: 100%;
+}
+
+footer aside > article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+    gap: var(--espace-tres-petit);
+    align-self: center;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espace-grand);
+    justify-content: space-between;
+    width: 50%;
+    padding-right: var(--espace-ttt-grand);
+}
+
+footer > div > article {
+    margin-top: var(--espace-petit);
+}
+
+footer article .bouton {
+    margin-top: var(--espace-moyen);
+    margin-bottom: var(--espace-moyen);
+}
+
+footer section {
+	display: flex;
+	gap: var(--espace-tres-grand);
+}
+
+footer article {
+    width: 100%;
+}
+
+footer h4 {
+    margin-bottom: var(--espace-petit);
+}
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+    
+    footer {
+        gap: var(--espace-moyen);
+    }
+
+    footer > aside {
+		align-items: center;
+		text-align: center;
+	}
+
+	footer section {
+		gap: var(--espace-grand);
+	}
+
+    footer aside {
+        border-right: none;
+        padding-right: 0;
+        gap: var(--espace-moyen);
+    }
+
+    footer aside picture {
+        width: 50%;
+        margin-top: var(--espace-moyen);
+    }
+
+    footer > div {
+        padding-right: 0;
+        width: 100%;
+        gap: var(--espace-moyen);
+    }
+
+    footer section {
+        flex-direction: column;
+        gap: var(--espace-moyen);
+        align-self: center;
+        border-bottom: 1px solid white;
+        padding-bottom: var(--espace-moyen);
+        gap: 0;
+        width: -webkit-fill-available;
+    }
+
+    footer section:nth-of-type(2) > article:first-of-type {
+        border-bottom: 1px solid white;
+        padding-bottom: var(--espace-moyen);
+    }
+
+    footer section:nth-of-type(2) > article:last-of-type {
+        padding-top: var(--espace-moyen);
+    }
+
+    footer > section article {
+        border-bottom: 1px solid white;
+        padding-bottom: var(--espace-moyen);
+    }
+
+    footer h4 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    footer > div div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    
+}

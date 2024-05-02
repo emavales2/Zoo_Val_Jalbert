@@ -1,0 +1,61 @@
+/* bouton.css / composant --------------------- */
+
+.bouton {
+    display: inline-block;
+	background-color: var(--bouton-2);
+	color: white;
+	font-family: 'Londrina Solid', cursive;
+	font-weight: normal;
+	border-radius: 5px;	 
+	border: 2px solid rgba(255, 255, 255, 0);   	
+	padding: var(--espace-petit);
+
+    max-width: max-content;
+}
+
+.bouton h4, .bouton h3 {
+	letter-spacing: .07em;
+	margin: 0;
+}
+
+.bouton h3 {
+	padding: var(--espace-petit);
+}
+
+.bouton h4 {
+	padding: var(--espace-tres-petit);
+}
+
+.bouton:hover {
+  background-color: var(--violet-bg);
+  color: white;
+  cursor: pointer;
+}
+
+/*position du bouton dans la carte*/
+.hero-secondaire .bouton {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--espace-tres-grand);
+    margin-bottom: var(--espace-grand);
+    position: relative;
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+
+	.bouton, .hero-secondaire .bouton {
+		margin-top: var(--espace-moyen);
+		margin-bottom: var(--espace-petit);
+		width: -webkit-fill-available;
+	}
+
+	.bouton h3, .bouton h4 {
+		padding: 0;
+		text-align: center;
+	}
+}

@@ -1,0 +1,74 @@
+/* langage.css ---------------------------------------------- */
+
+:root {
+
+    /* Charte de couleurs */    
+
+    --arriere-plan: var(--grisvert-clair);
+    --couleur-1: var(--vert-fonce);
+    --couleur-2: var(--violet);
+    --bouton-1: var(--or);
+    --bouton-2: var(--violet);
+    --ombre-nav: var(--ombre-1);
+
+
+    --photo: rgb(44, 43, 43) /*#405F22*/;
+    --texte-hover: rgb(252, 253, 252);
+    --blanc-casse: rgb(177, 174, 174);
+    --blanc: rgb(251, 253, 245);
+    --gris-pale: rgb(177, 175, 175);
+    --noir: #405F22;
+
+    --grisvert-clair: rgb(230 237 225); /*rgb(222, 227, 219); */
+    --vert-fonce: rgb(30, 45, 21);
+    --vert-bg: rgb(60, 107, 33);
+    --vert-clair: rgb(200, 216, 189);
+    --vert: rgb(42, 104, 2);
+    --vert-lumi: rgb(129, 203, 63);
+    --or:  rgb(252 191 62); /*rgb(255, 174, 0);*/
+    --terracotta: rgb(175, 73, 4);
+    --violet: rgb(176, 127, 247);
+    --violet-texte: rgb(149, 93, 232);
+    --violet-bg: rgb(191, 154, 245); 
+    --violet-clair: rgb(227 215 255);
+    --orange: rgb(255, 125, 17);
+    --ombre-1: 0px 20px 20px -10px #17221a1a;
+    --ombre-2: 5px 5px 20px 0px #17221a6b;
+    --ombre-3: 4px 4px 10px 0px #17221a36;
+    
+    
+
+   
+   
+    
+    /* Espacements - rythme */
+    --gouttiere: 20px;
+    --colonne: 30ch;
+     
+    --espace-tt-petit: 2px;
+    --espace-tres-petit: 5px;
+	--espace-petit: 10px; /* verified variable in all files */
+	--espace-moyen: 20px; /* verified variable in all files */
+	--espace-grand: 30px; /* verified variable in all files */
+    --espace-tres-grand: 50px; /* verified variable in all files */
+    --espace-tt-grand: 75px; /* verified variable in all files antes 100px*/
+    --espace-ttt-grand: 100px;  /* JUST ONE INSTANCE IN ENSEMBLE-LOGOS antes 150px */
+    --espace-super-grand: 150px; /* NOWHERE, COULD ELIMINATE, will change tho antes 200px*/
+        
+    /* Taille de police */
+    --texte-tp: 14px; 
+    --texte-p:  16px;
+    --texte-m:  20px;
+    --texte-mg: 25px;
+    --texte-g:  30px;
+    --texte-tg: 40px;
+    --texte-ttg: 55px;
+    --texte-tttg: 100px;
+
+    /* rayons */
+    --rayon-boite: 10px;
+
+    /* media query */
+    --max_width_mq_petit: 600px;
+    
+}

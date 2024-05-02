@@ -1,0 +1,75 @@
+/* composition.css ---------------------------------------------------------
+Contenu de haut niveau */
+
+/* Mettre en colonne */
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+/* Place la navigation */
+nav {
+	padding: var(--espace-petit) var(--espace-tres-grand);
+}
+
+main {
+	/* Mettre en colonne avec éspace entre les divisions */
+	display: flex;
+	flex-direction: column;
+	/* gap: var(--espace-ttt-grand); */
+	/* padding-top: var(--espace-ttt-grand); */
+	padding-bottom: var(--espace-ttt-grand);
+    gap: var(--espace-super-grand);
+    padding-top: var(--espace-super-grand);
+	
+	/* Mettre limite à la largeur, centrer le contenu, mettre un bg */
+	max-width: 1550px; 
+	margin-left: auto;
+	margin-right: auto;
+	/* background: var(--arriere-plan); */
+    background:antiquewhite;
+}
+
+/* Placement du footer */
+footer {
+	padding: var(--espace-ttt-grand);
+	padding-bottom: var(--espace-tres-grand);
+	display: flex;
+	flex-direction: row;
+	gap: var(--espace-super-grand);
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+
+	nav {
+		padding: var(--espace-petit);
+	}
+
+	main {
+		gap: var(--espace-grand);
+		padding-top: var(--espace-grand);
+		padding-bottom: var(--espace-grand);
+		width: 100%;
+	}
+	
+	footer  {
+		padding: var(--espace-grand);
+		flex-direction: column;
+	}
+}
+
+
+
+
+
+
+
+
+

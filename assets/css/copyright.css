@@ -1,0 +1,11 @@
+
+
+[id = copyright] {
+    color: var(--arriere-plan);
+    padding: var(--espace-grand);
+    padding-bottom: var(--espace-tres-grand);
+    display: flex;
+    align-self: center;
+    text-align: center;
+    font-size: var(--texte-tres-petit);
+}

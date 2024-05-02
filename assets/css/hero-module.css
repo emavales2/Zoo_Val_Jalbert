@@ -1,0 +1,24 @@
+/* hero-module.css ------------------------------------------
+   réuni les propriétés de base pour un module hero sans le placement du texte */
+
+.hero-module {
+    position: relative;
+    display: flex;
+    color: white;
+    background-color: var(--vert-bg);
+}
+
+.hero-module img {
+    /* étendre l'image au complet (dans son parent) */
+    position: absolute;
+    inset: 0;
+}
+
+/* -- rythme */
+.hero-module div > * + * {   
+    margin-top: var(--espace-grand);
+}
+
+
+
+

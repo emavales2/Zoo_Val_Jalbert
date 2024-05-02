@@ -1,0 +1,134 @@
+/* module-texte-image.css - composant ----------------------- */
+
+.module-texte-image {  
+    display: flex;
+    /* background-color: white ; */
+    min-height: 400px;
+    max-height: 500px;
+    margin-right: var(--espace-ttt-grand);
+    margin-left: var(--espace-ttt-grand);
+}
+
+.module-texte-image:last-of-type {
+    box-shadow: 5px 5px 10px 0px #17221a36;
+}
+
+.module-texte-image picture {
+    flex-basis: 90%;
+    /* background-color: white; */
+    /* max-height: 450px;
+    height: 100%; */
+    /* background: yellow; */
+
+    flex-basis: 60%;
+}
+
+.module-texte-image img {
+    /* height: 100%; */
+    max-height: 25rem;
+    /* max-width: 40rem; */
+    /* align-self: self-end; */
+    /* display: flex; */
+    position: relative;
+    margin-right: 0;
+    margin-left: var(--espace-super-grand);
+    display: block;
+    height: 90%;
+    width: 91%;
+    top: 20px;
+}
+
+.module-texte-image div {
+    flex-basis: 40%;
+    flex-direction: column;
+    display: flex;
+    padding: 40px;
+    gap: var(--espace-moyen);
+    background-color: white;
+}
+
+.module-texte-image:first-of-type div {
+    box-shadow: 5px 5px 10px 0px #17221a36;
+    flex-basis: 50%;
+}
+
+.module-texte-image p {
+    color: var(--vert-bg);
+}
+
+.module-texte-image h3 {
+    color: var(--vert-fonce);
+}
+
+.module-texte-image p {
+    flex-basis: 33%;
+    font-size: clamp(var(--texte-m), 1.5vw, var(--texte-g));
+    margin-bottom: auto;
+    font-weight: bold;
+}
+
+.module-texte-image .bouton {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: var(--espace-petit);
+
+}
+
+
+
+.module-texte-image:nth-of-type(2) {
+    background-color: var(--vert-bg);
+    color: white;
+}
+
+.module-texte-image:nth-of-type(2) h3 {
+    color: white;
+    color: var(--vert-fonce);
+}
+
+.module-texte-image iframe {
+    flex-basis: 90%;
+    background-color: white;
+    max-height: 450px;
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {   
+    
+    .module-texte-image { 
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .module-texte-image:nth-of-type(2) {
+        height: 225px;
+    }
+
+    .module-texte-image div {
+        padding: var(--espace-grand);
+        gap: var(--espace-petit);
+    }
+
+    .module-texte-image picture {
+        max-height: 225px;
+    }
+
+    .module-texte-image img {
+        width: 125%;
+        top: 10px;
+        right: 40px;
+        position: relative;
+        height: 100%;
+    }
+
+    .module-texte-image .bouton {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

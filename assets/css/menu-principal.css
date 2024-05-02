@@ -1,0 +1,131 @@
+/* menu-principal.css --------------------------------
+composante*/
+
+
+.menu-principal {
+    /* comportement d'affichage*/
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    background-color: var(--violet-clair);
+    color: var(--vert-bg);
+    width: 100%;
+    margin: 0;
+    display: flex;
+}
+
+/* affichage des deux sous-sections */
+.menu-principal aside {
+    display: flex;
+    gap: var(--espace-grand);
+    padding: var(--espace-tres-grand);
+    box-shadow: var(--ombre-nav) inset;
+    text-align: center;
+}
+
+.menu-principal picture {
+    width: 30px;
+    height: 30px;
+    padding: var(--espace-petit);
+}
+
+.menu-principal img {
+    height: auto;  
+}
+
+/* Gerer la 1e sous-section (billetterie) */
+.menu-principal aside:nth-of-type(1) {
+    background-color: var(--violet-bg);
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-principal aside:nth-of-type(1) > .bouton:hover {
+    border: solid 2px white;
+}
+
+.menu-principal aside:nth-of-type(1) picture {
+    width: 100px;
+    height: 60px;
+    padding: var(--espace-petit);
+} 
+
+.menu-principal .bouton {
+    display: inline-block;
+}
+/*  --- * --- */
+
+/* Gerer la 2e sous-section (blocs de liens) */
+.menu-principal aside:nth-of-type(2) {
+    width: 100%;
+}
+
+.menu-principal article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+  
+.menu-principal a {
+    padding-right: var(--espace-moyen);
+    padding-bottom: var(--espace-petit);
+    padding-left: var(--espace-moyen);
+}
+/* --- * --- */
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+    
+    .menu-principal {
+        margin-left: var(--espace-petit);
+        min-height: 63vh;
+        flex-direction: column; 
+        top: 85px; 
+        background-color: var(--vert-fonce);    
+    }
+
+    .menu-principal > aside {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--espace-grand);
+        gap: var(--espace-moyen);
+        box-shadow: none;
+    }
+
+    .menu-principal > aside:first-of-type > picture {
+        width: 60px;
+        height: 40px;
+    }
+
+    .menu-principal > aside:first-of-type {
+        background-color: var(--vert-fonce);
+    }
+
+    .menu-principal > aside:last-of-type {
+        background-color: var(--vert-fonce);
+        padding: 0;
+        gap: 0;
+        padding-bottom: 100px;
+        color: var(--arriere-plan);
+    }
+
+    .menu-principal > aside:last-of-type a {
+        font-weight: normal;
+    }
+
+    .menu-principal > aside:last-of-type picture {
+        display: none;
+    }
+
+    .menu-principal h6 {
+        font-size: var(--texte-p);
+    }  
+}
+
+
+

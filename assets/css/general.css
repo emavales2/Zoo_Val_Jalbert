@@ -1,0 +1,38 @@
+/* general.css -----------------------------------------
+	Propriétés qui s'appliquent en général */
+
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	background-color:var(--vert-fonce);
+
+	/* ----- Au cas oú on veut placer une image de bg ----- */
+	/*background-image: url(../img/green_1.png);
+	width: 100%;
+	object-fit: cover;*/
+}
+
+a {
+    color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+/* les images remplissent la taille de leur parent */
+img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* En cas oú les images ont besoin d'avoir une taille plus de 100% height/width */
+picture {
+	overflow: hidden;
+}

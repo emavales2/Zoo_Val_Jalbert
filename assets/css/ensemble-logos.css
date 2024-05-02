@@ -1,0 +1,83 @@
+/*ensemble-logos.css / conteneur + composants ------ */
+
+.ensemble-logos {
+	display: flex;
+	justify-content: space-between;
+	margin-top: var(--espace-tres-grand);
+	margin-bottom: var(--espace-tres-grand);
+	width: 100%;
+}
+
+/* Titres de chaque bloc */
+.ensemble-logos h4 {
+	margin-right: auto;
+	padding-top: var(--espace-grand);
+	padding-bottom: var(--espace-grand);
+}
+
+/* Taille des logos */
+footer > aside .ensemble-logos img {
+	height: 35px;
+	width: auto;
+}
+
+footer > div .ensemble-logos {
+	margin-top: var(--espace-petit);
+}
+
+/* Pour les logos "partenaires" du footer*/
+footer > div .ensemble-logos img {
+	align-self: center;
+	width: 100px;
+    height: auto;
+}
+
+/* Pour les logos avec proportions verticales */
+.ensemble-logos .logoVert {
+	width: 32px;
+    height: auto;
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+
+	.ensemble-logos {
+		margin-top: var(--espace-petit);
+		margin-bottom: var(--espace-moyen);
+		width: auto;	
+	}
+
+	.ensemble-logos div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--espace-moyen);
+	}
+
+	div > article > .ensemble-logos img {
+		width: 100px;
+		height: auto;
+	}
+
+	.ensemble-logos img {
+		margin: 15px;
+		height: 25px;
+	}
+
+	footer > aside .ensemble-logos {
+		max-width: 300px;
+	}
+
+	.ensemble-logos h4 {
+		padding-bottom: 0;
+		padding-top: var(--espace-grand);
+	}
+
+	div > article > .ensemble-logos .logoVert {
+		width: 30px;
+	}	
+}

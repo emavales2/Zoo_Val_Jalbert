@@ -1,0 +1,81 @@
+/* hero-secondaire.css ------------------------------------------ */
+
+
+
+.hero-secondaire {
+    /*position de la boite dans la page*/
+    /*margin-top: var(--espace-ttt-grand);
+    margin-bottom: var(--espace-ttt-grand);*/
+  
+   /*  padding: var(--espace-tres-grand);*/
+    margin-left: auto;
+    margin-right: var(--espace-ttt-grand);
+    min-height: 500px;
+    width: 700px;
+    box-shadow: var(--ombre-2);
+ 
+    /*parent à l'intérieur de la carte pour place texte*/
+    /*display: flex;
+    flex-direction: column;*/
+}
+.hero-secondaire div {
+    /*max-width: 50ch; */
+    display: flex;
+    flex-direction: column;
+    z-index: 1; /*pa poner el texto encima de la foto*/
+    padding: var(--espace-tt-grand);
+}
+
+/*espace entre le titre et le texte*/
+.hero-secondaire p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* taille de police relative à la fenêtre  */
+.hero-secondaire h2 {
+    font-size: clamp(var(--texte-g), 4vw, var(--texte-ttg)); /* taille de police relative à la fenêtre  */
+    margin-bottom: var(--espace-grand);
+    max-width: 70%;
+}
+
+.hero-secondaire p {
+    font-size: clamp(var(--texte-m), 2vw, var(--texte-tg)); 
+}
+
+
+
+
+
+
+    /* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+
+    .hero-secondaire div  {
+        max-width: 40ch;
+        padding: var(--espace-grand);
+    }
+
+    .hero-secondaire {
+        text-align: center;
+        position: relative;
+        width: 100%;
+    }
+
+    .hero-secondaire h2, p {
+        align-self: center;
+        text-align: left;
+    }
+
+    .hero-secondaire .bouton {
+		margin-top: var(--espace-grand);
+		margin-bottom: var(--espace-petit);
+	}
+}
+
+    
+
+
+ 
+  

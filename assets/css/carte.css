@@ -1,0 +1,242 @@
+/* carte.css / composant --------------- */
+
+/* Disposition génerale de la carte */
+/* .carte {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-color: var(--vert-bg);
+	box-shadow: var(--ombre-3);
+	color: white;
+} */
+
+/* Disposition de la <div> texte */
+.carte div {
+	flex-basis: 25%;
+	display: flex;
+	flex-direction: column;
+	gap: var(--espace-moyen);
+	padding: var(--espace-grand);	
+}
+
+.carte h5 {
+	color: var(--arriere-plan);
+}
+
+.carte h6 {
+	color: var(--vert-lumi);
+}
+/* --- * --- */
+
+.carte picture {
+	flex-basis: 75%;
+	min-height: 300px;
+    max-height: 350px;
+}
+
+/* ------------ */
+.carte {
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+	background-color: var(--vert-bg);
+	box-shadow: var(--ombre-3);
+	color: white;
+}
+
+.carte picture {
+    min-height: unset;
+    max-height: unset;
+}
+
+
+
+/* ------------ */
+
+/* Un peu n'importe quoi mais ça a eté la seule manière dont j'ai réussi à cibler l'image des écussons */
+.grille:nth-of-type(1) > a:nth-of-type(3) img  {
+	width: 130%;
+}
+
+.carte a:hover {
+	color: var(--blanc);
+}
+
+/* --- VARIATION HORIZONTALE --- */
+.horizontal {
+	flex-direction: row;
+	background-color: var(--vert-fonce);
+}
+
+.horizontal picture {
+	min-height: 100px;
+	max-height: 250px;
+    background: var(--vert-lumi);
+}
+
+.horizontal:hover img {
+    opacity: .75;
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {  
+
+	.carte div {
+		padding: var(--espace-moyen);
+		gap: var(--espace-petit);
+	}
+
+	.carte picture {
+		min-height: 200px;
+		max-height: 250px;
+	}
+
+	.horizontal {
+		flex-direction: column;
+		max-height: 400px;
+	}
+
+	.horizontal img {
+		width: 120%;
+		position: relative;
+		top: var(--espace-petit);
+	}
+}
+
+
+
+
+
+
+.balls { /* esto deberia ir con grille o whatevs pero es para que yo vea*/
+    width: 100%;
+    max-width: unset;
+    /* top: -150px; */
+    position: relative;
+}
+
+.balls > a {
+    max-height: 25rem;
+}
+
+
+
+.blob_item {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	/* box-shadow: var(--ombre-3); */
+	/* color: white; */
+}
+
+.blob_item div {
+    flex-basis: 25%;
+	display: flex;
+	flex-direction: column;
+	gap: var(--espace-moyen);
+	padding: var(--espace-grand);	
+    /* background-color: var(--vert-fonce); */
+    min-height: 10rem;
+    /* background-color: white; */
+}
+
+.blob_item h6 {
+    color: var(--vert-lumi);
+}
+
+.blob_item h5 {
+    color: var(--vert-fonce);
+    font-weight: 400;
+}
+
+.blob_item .bouton h5 {
+    margin: 0;
+    padding-top: 0;
+    color: white;
+    letter-spacing: .08rem;
+    font-weight: 400;
+}
+
+.test_blob {
+    /* .test_blob > picture { */
+        /* background: yellow; */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        filter: drop-shadow(#17221a52 5px 5px 6px);
+        justify-content: flex-end;
+        height: 35rem;
+    }
+    
+.test_blob > picture:first-of-type {
+/* .test_blob > picture > img { */
+    /* clip-path: url(#blobClip1); */
+    background: whitesmoke;
+    display: block;
+    width: 100%;
+    /* height: 100%;   */
+    height: 25rem;
+    background: var(--vert-lumi);
+}
+
+.test_blob.clip_1 > picture:first-of-type {
+    clip-path: url(#blobClip1);
+}
+
+.test_blob.clip_2 > picture:first-of-type {
+    clip-path: url(#blobClip2);
+    height: 27rem;
+    position: relative;
+    top: 20px;
+}
+
+.test_blob.clip_3 > picture:first-of-type {
+    clip-path: url(#blobClip3);
+}
+
+.blob_item:nth-of-type(2) picture:first-of-type > img {
+    position: relative;
+    top: 25px;
+}
+
+.blob_item:nth-of-type(3) picture:first-of-type > img {
+    position: relative;
+    left: 23px;
+    height: 95%;
+    top: 20px;
+}
+
+.test_blob picture:first-of-type:hover > img {
+    cursor: pointer;
+    opacity: .75;
+}
+
+.test_blob > picture > img {
+    max-width: 100%;
+    max-height: 100%;  
+}
+    
+[id=blobClip1] {
+    /* width: 100%;
+    height: 100%; */
+    /* filter: drop-shadow(red 1rem 1rem 10px); */
+}
+.arrow {
+    z-index: 2;
+    position: absolute;
+    width: 125px;
+    height: 130px;
+    /* background: red; */
+    align-self: flex-end;
+    bottom: 100px;
+    right: 30px;
+}
+
+    .arrow > img {
+        width: auto;
+        height: 100%;
+    }

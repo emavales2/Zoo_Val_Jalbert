@@ -1,0 +1,30 @@
+/* grille.css --------------
+composante de structure, grille de présentation auto adaptative */
+
+
+.grille {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--colonne), 1fr));
+	gap: var(--espace-grand);	
+
+	/* Permet que les cartes soient posées ver la gauche (offset), mais si plus de cartes son ajoutées, le width peut s'ajuster à 100% */
+	width: 85%;
+}
+
+/* --- VARIATION VERTICALE --- */
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+
+	.column {
+		width: 100%;
+	}
+}

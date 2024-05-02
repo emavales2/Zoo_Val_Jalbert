@@ -1,0 +1,45 @@
+/* declencheur.css / composant ------------------------- */
+
+.declencheur {
+    appearance: none;
+    padding: var(--espace-petit);
+}
+
+.declencheur.menu {
+    font-size: var(--texte-m);
+    /* color: var(--vert);  */
+    z-index: 1;
+    text-align: right;
+    cursor: pointer;
+    color: var(--vert-fonce);
+    font-weight: bold;
+}
+
+.declencheur.menu::before {
+    min-width: 11ch;
+    display: block;
+}
+
+.declencheur.menu:not(:checked)::before {
+    content: "Ouvrir menu";
+}
+
+.declencheur.menu:checked::before {
+    content: " Fermer menu";
+    color: var(--violet);
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+
+    .declencheur.menu {
+        font-size: var(--texte-p);
+    }
+
+}
+
+

@@ -1,0 +1,53 @@
+/* entete-hero.css ------------------------------------------
+    composante de contenu - pour fixer la position du texte dans l'entête seulement */
+
+
+    .hero-entete {
+        min-height: 90vh; 
+    } 
+
+    /* -- Gere la <div> texte */
+    .hero-entete div {
+        margin: var(--espace-ttt-grand);
+        position: relative;
+        text-align: left;
+        margin-right: auto;
+        max-width: 50%;
+        align-self: flex-start;
+        padding: var(--espace-tres-grand);
+        
+        /* Dégager le texte tu bord supérior car la nav restera figée sur place */
+        margin-top: var(--texte-tttg); 
+    }
+
+    /* Si jamais c'est nécessaire de deplacer l'image dans son conteneur: 
+    .hero-entete header > img {
+        object-position: 0 0; 
+    } */
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {
+
+    /* Centre et readjuste le texte */
+    .hero-entete div {
+        margin: var(--espace-grand);
+        text-align: center;            
+        max-width: 100%;
+        align-self: center;
+        padding: 0;
+        padding-top: var(--espace-tt-grand);
+        display: flex;
+        flex-direction: column;
+    }
+     
+    /* Gerer l'image arrière-plan pour fair le texte plus lisible et au même temps montrer le sujet */
+    .hero-entete > img {
+        object-position: -310px 0; 
+        background-color: var(--vert-fonce);
+        opacity: .75;
+    }       
+}

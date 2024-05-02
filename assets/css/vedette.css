@@ -1,0 +1,135 @@
+
+/* vedette.css / Conteneur et ses composants ---------------- */
+/* Même si cette classe partage certains éléments avec hero-module, la quantité de différences fait plus facile avoir une classe différente */
+
+.vedette {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    color: var(--blanc);
+}
+
+/* ------- BG étoilé ------- */
+.vedette > picture { 
+    background: var(--vert-fonce);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* Permettre que la grille de cartes soit decalée vers le bas */
+    max-height: 56rem;
+}
+
+.vedette > picture > img {
+    /* Ajuster la luminosité avec la couleur du bg */
+    opacity: .7;
+
+    /* Arranger l'image de bg dans son conteneur. */
+    /* position: absolute;
+    inset: 0;
+    background-color: var(--violet-clair); */
+
+    /* Permettre que la grille de cartes soit decalée vers le bas */
+    /* height: 85%;     */
+}
+
+/* Gere la <div> avec le contenu (header + grille cartes) */
+.vedette > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espace-ttt-grand);
+    padding: 0 var(--espace-ttt-grand);
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    align-self: flex-start; 
+}
+
+/* Cible la première section "vedette" */
+main > section:nth-of-type(2) > div {
+    gap: 0;
+}
+
+.vedette a, .vedette h4 {
+    z-index: 1;
+}
+
+
+
+
+
+
+/* --- VARIATION HORIZONTALE --- */
+/* Pour la 2e instance de "vedette", avec une ditribution horizontale */
+
+/* Adjustement pour que les cartes horizontales soient aussi decalées vers le bas*/
+.row {
+    /* min-height: 70vh; */
+}
+
+.row > div {
+    flex-direction: row;
+}
+
+.row header {
+    flex-basis: 25%;
+    color: white;
+    color: var(--vert-fonce);
+}
+
+.row aside {
+    flex-basis: 75%;
+}
+
+.row .bouton > h5 {
+    margin-top: 0;
+}
+
+.row .bouton {
+    margin-top: var(--espace-grand);
+}
+
+
+
+
+/* ----------- MEDIA QUERY PETITE ÉCRAN ----------- */
+
+@media screen and (max-width: 600px) {      
+
+    .vedette {
+        padding: 0;
+    }
+
+    .vedette > picture > img {
+        top: 0;
+    }
+
+    .vedette > div {
+        margin: 0;
+        padding: var(--espace-grand);
+        max-width: 40ch;
+        align-self: center;
+        padding-bottom: 0;
+    }
+
+    .vedette header {
+        text-align: center;
+    }
+
+    .vedette header > h5 {
+        font-size: var(--texte-mg);
+        max-width: 90%;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .row > div {
+        flex-direction: column;
+    }
+
+    main > section:nth-of-type(2) h2 {
+        font-size: clamp(50px, 65px, 90px);
+    }
+}

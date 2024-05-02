@@ -1,0 +1,69 @@
+.nocturne {
+    display: flex;
+    flex-direction: row;
+    gap: var(--espace-ttt-grand);
+    justify-content: space-between;
+    padding-top: var(--espace-ttt-grand);    
+}
+
+.nocturne > header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espace-grand);
+}
+
+/* Cible la ligne d'intro + bouton calendrier */
+.nocturne span {
+    display: flex;
+    gap: var(--espace-tres-grand);
+    align-items: center;
+}
+
+/* Cible le titre "La Nocturne" */
+.nocturne h2 {
+    line-height: .75;
+    margin-bottom: var(--espace-petit);
+    font-size: var(--espace-ttt-grand)
+}
+
+.nocturne header h3 {
+    margin: 0;
+    color: var(--violet-bg);
+}
+
+.nocturne span > h4 {
+    letter-spacing: .08rem;
+}
+
+.nocturne header > h5 {
+    line-height: 1.16;
+    max-width: 45ch;
+    font-size: var(--texte-g);
+    font-weight: normal;
+    line-height: 1.16;
+} 
+
+.nocturne header > p {   
+    margin-top: var(--espace-moyen);
+}
+
+.nocturne > picture {
+    display: block;
+    max-height: 35rem;
+    max-width: 35rem;
+    /* background: red; */
+    /* align-self: center; */
+    align-self: flex-start;
+
+    /* Place l'image sur le bord droit sans avoir besoin de trop  jouer avec padding de toute la section */
+    position: relative;
+    right: -100px;
+    top: -20px;
+
+}
+
+.nocturne > picture > img {
+    /* background: pink; */
+    max-height: 100%;
+    max-width: 35rem;
+}
